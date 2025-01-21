@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="activationForm">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="otpCode" type="email"></ion-input>
+    </ion-item>
+<!--    <ion-item *ngIf="activationForm.get('otpCode').invalid && activationForm.get('otpCode').touched">-->
+<!--      <ion-note color="danger">Email is required</ion-note>-->
+<!--    </ion-item>-->
+    <ion-button expand="full" (click)="sendCode()" [disabled]="activationForm.get('otpCode').invalid">Login</ion-button>
+  </form>
+</ion-content>

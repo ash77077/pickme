@@ -1,0 +1,35 @@
+<app-pages-with-logo>
+    <div class="text-center text-fz-22 mt-8">Welcome to PickMe!</div>
+    <div class="text-center text-fz-14 mt-3">
+        <div>Fast and testy with us</div>
+        <div>Order, share and save delicious meals</div>
+    </div>
+    <div class="input-group mt-12">
+        <form [formGroup]="formGroup" class="card flex justify-center gap-4 w-full">
+            <app-phone-code-select
+                    [control]="formGroup.get('code')"
+            ></app-phone-code-select>
+            <p-inputmask
+                    mask="99 999-999"
+                    formControlName="number"
+                    placeholder=""/>
+        </form>
+    </div>
+    <div class="continue-btn fixed bottom-8">
+        <div class="text-xs primary mb-5">
+            By clicking the “Continue” button, you <span class="text-blue-500">agree to collection and processing of personal data.</span>
+        </div>
+        <p-button
+                [label]="'Continue' | translate"
+                styleClass="w-full primary"
+                (click)="continue()"
+                [disabled]="formGroup.invalid"
+        ></p-button>
+    </div>
+</app-pages-with-logo>
+<!--<div class="relative w-full">-->
+
+<!--</div>-->
+<!--<ion-item *ngIf="registerForm.get('firstName').invalid && registerForm.get('firstName').touched">-->
+<!--    <ion-note color="danger">First name is required</ion-note>-->
+<!--</ion-item>-->

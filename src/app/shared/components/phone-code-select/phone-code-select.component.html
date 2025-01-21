@@ -1,0 +1,27 @@
+<p-select
+        [options]="countries"
+        optionLabel="name"
+        [formControl]="control"
+        placeholder="Select a code"
+        class="min-w-full"
+>
+    <ng-template #selectedItem let-selectedOption>
+        <div class="flex items-center gap-2" *ngIf="selectedOption">
+            <span
+                    [class]="'fi fi-' + selectedOption.isoCode2.toLowerCase()"
+                    style="width: 18px"
+            ></span>
+            <div>+{{ selectedOption.countryCodes }}</div>
+        </div>
+    </ng-template>
+    <ng-template let-country #item>
+        <div class="flex items-center gap-2">
+            <span
+                    [class]="'fi fi-' + country.isoCode2.toLowerCase()"
+                    style="width: 18px"
+            >
+            </span>
+            <div>+{{ country.countryCodes }}</div>
+        </div>
+    </ng-template>
+</p-select>

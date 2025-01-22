@@ -1,3 +1,41 @@
-<p>
-  step-3 works!
-</p>
+<div class="text-center mt-8">{{ 'personalInformation' | translate }}</div>
+<app-pages-with-logo>
+    <div class="text-center text-fz-22 mt-8">{{ 'pleaseEnterYourPersonalData' | translate }}</div>
+    <div class="mt-6 flex justify-center w-full">
+        <form [formGroup]="personalForm" class="w-full">
+            <p-floatlabel class="w-full md:w-56 mt-5" variant="on">
+                <input pInputText id="firstName" formControlName="firstName" class="w-full" autocomplete="off"/>
+                <label for="firstName">{{ 'firstName' | translate }}</label>
+            </p-floatlabel>
+            <p-floatlabel class="w-full md:w-56 mt-5" variant="on">
+                <input pInputText id="lastName" formControlName="lastName" class="w-full" autocomplete="off"/>
+                <label for="lastName">{{ 'lastName' | translate }}</label>
+            </p-floatlabel>
+            <p-floatlabel class="w-full md:w-56 mt-5" variant="on">
+                <input pInputText id="email" formControlName="email" class="w-full" autocomplete="off"/>
+                <label for="email">{{ 'email' | translate }}</label>
+            </p-floatlabel>
+            <p-floatlabel class="w-full md:w-56 mt-5" variant="on">
+                <input
+                        appAutocomplete
+                        pInputText
+                        id="city"
+                        placeholder=""
+                        class="google-place w-full"
+                        autocomplete="off"
+                        formControlName="city"
+                />
+                <label for="city">{{ 'city' | translate }}</label>
+            </p-floatlabel>
+        </form>
+    </div>
+
+    <div class="continue-btn fixed bottom-8">
+        <p-button
+                [label]="'Continue' | translate"
+                styleClass="w-full primary"
+                (click)="continue()"
+                [disabled]=""
+        ></p-button>
+    </div>
+</app-pages-with-logo>

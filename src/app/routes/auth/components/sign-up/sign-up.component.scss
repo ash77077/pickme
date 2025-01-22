@@ -1,0 +1,5 @@
+@use "../../../../../theme/variables";
+
+.main-bg {
+  background-color: variables.$bg-color;
+}

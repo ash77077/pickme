@@ -15,3 +15,5 @@ export class AppComponent {
     this.translate.setDefaultLang(DefaultLanguage);
   }
 }
+
+//AIzaSyAyASNlKJNZWvA-eeWXobQ9kQoPuJcGw_g

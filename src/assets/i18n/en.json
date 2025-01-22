@@ -1,3 +1,10 @@
 {
-  "Continue": "Continue"
+  "Continue": "Continue",
+  "enterVerificationCode": "Enter Verification Code",
+  "personalInformation": "Personal Information",
+  "pleaseEnterYourPersonalData": "Please enter your personal data",
+  "lastName": "Last name",
+  "firstName": "First name",
+  "city": "City",
+  "email": "Email"
 }

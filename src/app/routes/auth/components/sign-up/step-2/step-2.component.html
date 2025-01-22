@@ -1,3 +1,22 @@
-<p>
-  step-2 works!
-</p>
+<app-pages-with-logo>
+    <div class="text-center text-fz-22 mt-8">{{'enterVerificationCode' | translate}}</div>
+    <div class="text-center text-fz-14 mt-3">
+        <div class="px-6">Enter code that we have sent to your phone number +374 *** *12</div>
+    </div>
+    <div class="mt-6 flex justify-center">
+        <p-inputotp
+                size="large"
+                [(ngModel)]="value"
+                [integerOnly]="true"
+        ></p-inputotp>
+    </div>
+
+    <div class="continue-btn fixed bottom-8">
+        <p-button
+                [label]="'Continue' | translate"
+                styleClass="w-full primary"
+                (click)="continue()"
+                [disabled]="!value"
+        ></p-button>
+    </div>
+</app-pages-with-logo>

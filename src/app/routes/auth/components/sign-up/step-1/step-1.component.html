@@ -9,8 +9,9 @@
             <app-phone-code-select
                     [control]="formGroup.get('code')"
             ></app-phone-code-select>
-            <p-inputmask
-                    mask="99 999-999"
+            <input
+                    pInputText
+                    [maxlength]="8"
                     formControlName="number"
                     placeholder=""/>
         </form>
@@ -23,7 +24,7 @@
                 [label]="'Continue' | translate"
                 styleClass="w-full primary"
                 (click)="continue()"
-                [disabled]="formGroup.invalid"
+                [disabled]="!formGroup.valid"
         ></p-button>
     </div>
 </app-pages-with-logo>

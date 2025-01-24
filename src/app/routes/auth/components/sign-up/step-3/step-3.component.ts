@@ -6,6 +6,7 @@ import {FloatLabel} from "primeng/floatlabel";
 import {InputText} from "primeng/inputtext";
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {AutocompleteDirective} from "../../../../../shared/directives/autocomplete.directive";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-step-3',
@@ -26,7 +27,10 @@ import {AutocompleteDirective} from "../../../../../shared/directives/autocomple
 export class Step3Component implements OnInit {
   personalForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.personalForm = fb.group({
       firstName: new FormControl('', [Validators.required, Validators.minLength(2)]),
       lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -40,7 +44,7 @@ export class Step3Component implements OnInit {
   }
 
   continue() {
-
+    this.router.navigateByUrl('home')
   }
 
 }

@@ -1,0 +1,26 @@
+<div class="main-home-container px-4 mt-3">
+    <div class="flex ion-align-items-center py-2.5">
+        <div>
+            <p-avatar
+                    label="NS"
+                    styleClass="mr-2"
+                    size="large"
+                    shape="circle"
+                    [style]="{ color: '#fff' }"
+            />
+        </div>
+        <div>
+            <div class="text-fz-14">Name Surname</div>
+            <div class="text-fz-14">Phone: +374 98 123 123</div>
+        </div>
+    </div>
+    <div class="py-2.5">
+        <p-inputgroup>
+            <p-inputgroup-addon>
+                <p-button icon="pi pi-search" severity="secondary" variant="text" (click)="menu.toggle($event)"/>
+            </p-inputgroup-addon>
+            <input [style]="{ borderLeft: 'none' }" pInputText placeholder="Search"/>
+        </p-inputgroup>
+        <p-menu #menu [model]="items" popup styleClass="!min-w-fit"/>
+    </div>
+</div>

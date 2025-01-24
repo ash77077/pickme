@@ -1,6 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
 
-$bg-color: #b5bc57 !default;
+$bg-color: #ECEDDF !default;
 $bg-btn: #FC7D12 !default;
 $bg-btn-disabled: #FC7D1280 !default;
+
+:root {
+  --primary: #FC7D12;
+  --primary-hover: #f8770a;
+  --primary-diasbled: #FC7D1280;
+
+
+  --secondary: #0A3775;
+  --secondary-hover: #052f68;
+  --secondary-disabled: #0A377599;
+
+  --bg-color: #ECEDDF
+}
